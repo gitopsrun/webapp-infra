@@ -2,5 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: istio-system
 resources:
-- github.com/weaveworks/flagger/kustomize/istio
+- github.com/weaveworks/flagger/kustomize/base/flagger
 - istio-metrics.yaml
+patchesStrategicMerge:
+  - patch.yaml
