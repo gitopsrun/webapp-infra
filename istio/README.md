@@ -43,7 +43,6 @@ tk create kustomization flagger \
   --source=webapp-infra \
   --path="./istio/flagger" \
   --prune=true \
-  --validate=client \
   --interval=1h \
   --health-check="Deployment/flagger.istio-system" \
   --health-check-timeout=3m

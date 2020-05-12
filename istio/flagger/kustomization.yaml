@@ -4,5 +4,6 @@ namespace: istio-system
 resources:
 - github.com/weaveworks/flagger/kustomize/base/flagger
 - istio-metrics.yaml
+- istio-gateway.yaml
 patchesStrategicMerge:
   - patch.yaml
