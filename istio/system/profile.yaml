@@ -12,3 +12,9 @@ spec:
           requests:
             cpu: 10m
             memory: 100Mi
+        hpaSpec:
+          maxReplicas: 3
+          minReplicas: 1
+        tolerations:
+          - key: CriticalAddonsOnly
+            operator: Exists
