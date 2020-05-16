@@ -18,3 +18,7 @@ spec:
         tolerations:
           - key: CriticalAddonsOnly
             operator: Exists
+  values:
+    global:
+      mtls:
+        auto: true
