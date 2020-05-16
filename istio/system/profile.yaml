@@ -5,6 +5,10 @@ metadata:
   name: istio-default
 spec:
   profile: default
+  values:
+    global:
+      mtls:
+        auto: true
   components:
     pilot:
       k8s:
@@ -18,7 +22,8 @@ spec:
         tolerations:
           - key: CriticalAddonsOnly
             operator: Exists
-  values:
-    global:
-      mtls:
-        auto: true
+  addonComponents:
+    grafana:
+      enabled: true
+    kiali:
+      enabled: true
