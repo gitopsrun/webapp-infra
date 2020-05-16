@@ -9,26 +9,15 @@ tk create source git webapp-infra \
   --interval=1m
 ```
 
-Webapp staging:
+Webapp:
 
 ```bash
-tk create kustomization webapp-staging \
+tk create kustomization webapp \
   --depends-on=istio-system \
   --source=webapp-infra \
-  --path="./webapp/overlays/staging" \
+  --path="./webapp" \
   --prune=true \
   --validate=client \
   --interval=30m
 ```
 
-Webapp production:
-
-```bash
-tk create kustomization webapp-production \
-  --depends-on=istio-system \
-  --source=webapp-infra \
-  --path="./webapp/overlays/production" \
-  --prune=true \
-  --validate=client \
-  --interval=30m
-```
