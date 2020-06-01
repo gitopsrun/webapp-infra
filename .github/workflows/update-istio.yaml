@@ -22,7 +22,7 @@ jobs:
           ISTIO_VER=${ISTIO_DIR##./istio-}
 
           echo "Build manifests for ${ISTIO_VER} in dir ${ISTIO_DIR}"
-          helm template ${ISTIO_DIR}/install/kubernetes/operator/charts/istio-operator/ \
+          helm template ${ISTIO_DIR}/manifests/charts/istio-operator/ \
           --set hub=docker.io/istio \
           --set tag=${ISTIO_VER} \
           --set operatorNamespace=istio-operator \

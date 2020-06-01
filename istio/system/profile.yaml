@@ -9,6 +9,8 @@ spec:
     global:
       mtls:
         auto: true
+    kiali:
+      createDemoSecret: true
   components:
     pilot:
       k8s:
